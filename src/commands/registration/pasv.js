@@ -27,7 +27,7 @@ module.exports = {
       const portByte1 = port / 256 | 0;
       const portByte2 = port % 256;
 
-      return this.reply(227, `PASV OK (${host},${portByte1},${portByte2})`);
+      return this.reply(227, `Entering Passive Mode (${host},${portByte1},${portByte2})`);
     })
     .catch((err) => {
       log.error(err);
